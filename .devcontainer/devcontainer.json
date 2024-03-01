@@ -1,0 +1,45 @@
+{
+    "name": "C# (.NET)",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:0-8.0",
+    "features": {
+        "ghcr.io/devcontainers/features/dotnet:2": {
+            "version":"lts",
+            "additionalVersions":"6.0"
+        }
+    },
+    "customizations": {
+        "vscode":{
+            "extensions": [
+                "editorconfig.editorconfig",
+				"euskadi31.json-pretty-printer",
+				"jinsihou.diff-tool",
+                "ms-dotnettools.csdevkit",
+                "nextfaze.json-parse-stringify",
+                "qcz.text-power-tools",
+                "streetsidesoftware.code-spell-checker",
+				"ybaumes.highlight-trailing-white-spaces"
+            ]}
+    },
+    "containerEnv":{
+        "ASPNETCORE_ENVIRONMENT": "Development",
+		"DOTNET_ENVIRONMENT": "Development"
+    },
+    "postCreateCommand": {
+		"BuildSln": "dotnet build *.sln -p:GenerateDocumentationFile=false"
+	},
+	"postAttachCommand": {
+		"RestoreSln": "dotnet restore *.sln"
+	},
+    "forwardPorts": [
+		5000,
+		5001
+	],
+	"portsAttributes": {
+		"5000": {
+			"protocol": "http"
+		},
+		"5001": {
+			"protocol": "https"
+		}
+	}
+}
