@@ -11,13 +11,14 @@
         "vscode":{
             "extensions": [
                 "editorconfig.editorconfig",
-				"euskadi31.json-pretty-printer",
-				"jinsihou.diff-tool",
+                "euskadi31.json-pretty-printer",
+                "jinsihou.diff-tool",
                 "ms-dotnettools.csdevkit",
                 "nextfaze.json-parse-stringify",
                 "qcz.text-power-tools",
                 "streetsidesoftware.code-spell-checker",
-				"ybaumes.highlight-trailing-white-spaces"
+                "ybaumes.highlight-trailing-white-spaces",
+                "bierner.github-markdown-preview"
             ]}
     },
     "containerEnv":{
